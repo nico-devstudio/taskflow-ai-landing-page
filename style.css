@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+    /* =====================
+     BRAND COLORS
+  ====================== */
+    --primary: #3b82f6;
+    /* main blue */
+    --primary-dark: #1d4ed8;
+    --accent: #06b6d4;
+    /* cyan glow */
+    --accent-purple: #8b5cf6;
+
+    /* =====================
+     BACKGROUND COLORS
+  ====================== */
+    --bg: #0b1220;
+    /* main dark background */
+    --bg-soft: #0f172a;
+    /* sections */
+    --card: #111827;
+    /* cards */
+    --glass: rgba(255, 255, 255, 0.06);
+
+    /* =====================
+     TEXT COLORS
+  ====================== */
+    --text-color: #e5e7eb;
+    /* main text */
+    --text-muted: #94a3b8;
+    /* secondary text */
+    --text-dark: #0f172a;
+
+    /* =====================
+     STATES
+  ====================== */
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+
+    /* Typography */
+
+    --font-main: "Inter", system-ui, sans-serif;
+
+    --h1: 3.2rem;
+    --h2: 2.4rem;
+    --h3: 1.8rem;
+    --text-lg: 1.125rem;
+    --text: 1rem;
+    --text-sm: 0.875rem;
+    --text-xs: 0.75rem;
+
+    --line-height: 1.6;
+
+    /* Gradients */
+
+    --gradient-primary: linear-gradient(135deg, #3b82f6, #06b6d4);
+    --gradient-dark: linear-gradient(180deg, #0b1220, #0f172a);
+    --gradient-glow: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 60%);
+
+    /* Border Radius */
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 999px;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body,
+button,
+input,
+textarea {
+    background: var(--gradient-dark);
+    color: var(--text-color);
+    font: 500 var(--text) var(--font-main);
+}
+
+.section {
+    padding-block: 4rem 1rem;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 100;
+    transition: all .3s ease;
+}
+
+.nav__logo {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem 1.5rem;
+    font-size: 1.3rem;
+}
+
+.nav__logo img {
+    width: 2rem;
+    margin-right: .4rem;
+    position: relative;
+    top: -0.2rem;
+}
+
+.menu,
+.close {
+    font-size: 1.5rem;
+    position: fixed;
+    top: 1rem;
+    right: 1.3rem;
+    background-color: var(--text-color);
+    border-radius: var(--radius-sm);
+    padding: .2rem;
+    color: var(--text-dark);
+}
+
+.close {
+    background-color: initial;
+    color: var(--text-color);
+}
+
+.nav__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--bg-soft);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100vh;
+    gap: 6rem;
+    padding-top: 5rem;
+}
+
+.nav__links,
+.nav__sign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav__links {
+    position: relative;
+    font-size: 2rem;
+    gap: 2rem;
+}
+
+.nav__links:after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 0.1;
+    width: 90%;
+    height: 2px;
+    top: 120%;
+}
+
+.nav__sign {
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+.button {
+    background: var(--gradient-primary);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-xl);
+
+}
