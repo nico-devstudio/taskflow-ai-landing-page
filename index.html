@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>TaskFlow AI</title>
 </head>
 
 <body>
     <header>
-        <nav class="nav_menu">
+        <nav class="nav">
             <div class="nav__logo">
                 <img src="assets/Taskflow AI logo.png" alt="logo">
                 <a href="#home">TaskFlow AI</a>
@@ -37,11 +37,99 @@
     </header>
 
     <main class="main">
-        <section class="hero section">
+        <section class="hero section" id="home">
+            <div class="hero__container container grid">
+
+                <div class="hero__content">
+                    <span class="hero__badge">
+                        ✨ AI-Powered Productivity
+                    </span>
+
+                    <h1 class="hero__title">
+                        Automate Your Workflow.
+                        <br>
+                        Focus on What Matters.
+                    </h1>
+
+                    <p class="hero__description">
+                        Organize projects, automate repetitive tasks, and boost your team's
+                        productivity with intelligent AI workflows.
+                    </p>
+
+                    <div class="hero__buttons">
+                        <a href="#" class="button">
+                            Start Free Trial
+                        </a>
+
+                        <a href="#" class="button button--ghost">
+                            ▶ Watch Demo
+                        </a>
+                    </div>
+
+                    <div class="hero__info">
+                        <span>✔ No credit card required</span>
+                        <span>✔ Setup in under 2 minutes</span>
+                    </div>
+                </div>
+
+                <!-- Dashboard Preview -->
+                <div class="hero__image">
+
+                    <div class="dashboard">
+                        <img src="assets/Dashboard.png" alt="dashboard">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="social section">
+
+            <div class="social__container container">
+
+                <p class="social__subtitle">
+                    Trusted by teams around the world
+                </p>
+
+                <ul class="social__logos">
+
+                    <li class="logo"><img src="assets/logos/NovaTech.png" alt="NovaTech">Novatech</li>
+
+                    <li class="logo"><img src="assets/logos/CloudSync.png" alt="CloudSync">CloudSync</li>
+
+                    <li class="logo"><img src="assets/logos/FlowBase.png" alt="FlowBase">FlowBase</li>
+
+                    <li class="logo"><img src="assets/logos/PixelCore.png" alt="PixelCore">PixelCore</li>
+
+                    <li class="logo"><img src="assets/logos/DataSphere.png" alt="DataSphere">DataSphere</li>
+
+                </ul>
+
+                <div class="social__stats">
+
+                    <div class="stat">
+                        <h3>10K+</h3>
+                        <span>Users</span>
+                    </div>
+
+                    <div class="stat">
+                        <h3>99.9%</h3>
+                        <span>Uptime</span>
+                    </div>
+
+                    <div class="stat">
+                        <h3>5M+</h3>
+                        <span>Tasks Automated</span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
