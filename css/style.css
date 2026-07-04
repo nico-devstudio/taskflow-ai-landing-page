@@ -581,4 +581,13 @@ body::before {
         margin-inline: 5%;
         border-radius: var(--radius-md);
     }
+
+    .hero {
+        margin-top: 5rem;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+    }
 }
