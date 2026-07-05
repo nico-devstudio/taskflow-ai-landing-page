@@ -320,7 +320,6 @@ header.scroll-header .nav {
 
 .hero {
     padding-bottom: 2rem;
-    background: var(--gradient-dark);
     overflow: hidden;
 }
 
@@ -404,7 +403,7 @@ header.scroll-header .nav {
     justify-content: center;
 }
 
-.dashboard {
+.hero__dashboard {
     position: relative;
     max-width: 650px;
     width: 100%;
@@ -424,14 +423,14 @@ header.scroll-header .nav {
     transition: transform .3s ease;
 }
 
-.dashboard img {
+.hero__dashboard img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: inherit;
 }
 
-.dashboard::before {
+.hero__dashboard::before {
     content: "";
     position: absolute;
     inset: -40px;
@@ -444,11 +443,13 @@ header.scroll-header .nav {
     filter: blur(60px);
 }
 
-.dashboard:hover {
+.hero__dashboard:hover {
     transform: perspective(1000px) rotateX(2deg) rotateY(-3deg) translateY(-6px);
 }
 
-
+.social {
+    background: none;
+}
 
 .social__container {
     text-align: center;
@@ -602,6 +603,116 @@ header.scroll-header .nav {
     line-height: 1.7;
 }
 
+/*=============== DASHBOARD ===============*/
+.dashboard {
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    isolation: isolate;
+}
+
+.dashboard::before,
+.dashboard::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.glow-bubble {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    /* Allows users to click "through" the glow if needed */
+    z-index: -1;
+    /* Pushes the glow behind the text and dashboard */
+    opacity: 0.4;
+    /* Keeps it subtle and integrated */
+}
+
+/* Large Blue Glow (Top/Center-Left) */
+.glow-bubble--blue {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+    top: -10%;
+    left: 10%;
+    filter: blur(100px);
+}
+
+/* Another Purple Glow (Bottom Right) */
+.glow-bubble--purple {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+    bottom: -5%;
+    right: 5%;
+    filter: blur(120px);
+}
+
+.dashboard__container {
+    display: grid;
+    gap: 1rem;
+}
+
+.dashboard__data {
+    text-align: center;
+}
+
+.dashboard__subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--first-color);
+    margin-bottom: 1rem;
+    background-color: hsla(230, 90%, 60%, .08);
+    padding: .5rem 1rem;
+    border-radius: var(--radius-full);
+
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.dashboard__subtitle i {
+    font-size: 1rem;
+}
+
+.dashboard__title {
+    font-size: var(--h2);
+    color: var(--title-color);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.dashboard__description {
+    color: var(--text-color-white-section);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.dashboard__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard__img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, .08);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, .15);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.dashboard__img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 80px rgba(15, 23, 42, .2);
+}
+
+
 @media screen and (min-width:768px) {
     :root {
         --h1: 3rem;
@@ -615,17 +726,59 @@ header.scroll-header .nav {
 
     .nav__menu {
         padding-top: 10rem;
+
     }
 
     .hero__info {
         gap: 2rem;
     }
 
+    .hero__buttons {
+        width: 70%;
+    }
+
     .social__logos {
         grid-template-columns: repeat(3, max-content);
     }
 
+    .features {
+        padding-block: 4rem;
+    }
 
+    .features__container {
+        gap: 4rem;
+    }
+
+    .features__header {
+        max-width: 650px;
+        margin-inline: auto;
+    }
+
+    .features__content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .features__card {
+        padding: 1.75rem;
+    }
+
+    .dashboard {
+        padding: 2rem 0;
+    }
+
+    .dashboard__container {
+        gap: 2rem;
+    }
+
+    .dashboard__description {
+        width: 80%;
+        margin: 0 auto 2.5rem;
+    }
+
+    .dashboard__img {
+        max-width: 700px;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -641,7 +794,6 @@ header.scroll-header .nav {
 
     .nav__menu {
         flex: 3;
-        display: flex;
         flex-direction: row;
         background-color: initial;
         height: initial;
@@ -649,10 +801,11 @@ header.scroll-header .nav {
         position: static;
         padding-right: 1.3rem;
         gap: 0;
+        transform: none;
     }
 
     .button {
-        padding: .5rem 1rem;
+        padding: .5rem 2.5rem;
     }
 
     .menu,
@@ -686,6 +839,7 @@ header.scroll-header .nav {
     .hero__buttons {
         flex-direction: row;
         justify-content: center;
+        width: 100%;
     }
 
     .social__container {
@@ -715,6 +869,41 @@ header.scroll-header .nav {
         gap: 1rem;
     }
 
+
+    .features__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features__card {
+        padding: 2rem;
+    }
+
+    .features__card:hover {
+        transform: translateY(-8px);
+    }
+
+    .dashboard {
+        padding: 4rem 0;
+    }
+
+    .dashboard__data {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .dashboard__title {
+        font-size: 3rem;
+    }
+
+    .dashboard__description {
+        width: 600px;
+        margin: 0 auto 3rem;
+    }
+
+    .dashboard__img {
+        max-width: 80%;
+    }
+
 }
 
 @media screen and (min-width:1280px) {
@@ -727,9 +916,45 @@ header.scroll-header .nav {
         margin-top: 1rem;
     }
 
+    .nav__link.button {
+        padding-inline: 1rem;
+    }
+
     .social {
         display: flex;
         justify-content: center;
     }
 
+    .features__container {
+        margin-inline: auto;
+    }
+
+    .features__header {
+        max-width: 700px;
+    }
+
+    .features__content {
+        gap: 2.5rem;
+    }
+
+    .features__card {
+        padding: 2.5rem;
+    }
+
+    .features__icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .features__icon i {
+        font-size: 1.75rem;
+    }
+
+    .dashboard {
+        padding: 5rem 0;
+    }
+
+    .dashboard__container {
+        margin-inline: auto;
+    }
 }
