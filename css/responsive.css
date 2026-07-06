@@ -88,6 +88,52 @@
         margin-inline: auto;
     }
 
+    .testimonials__content {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .section__title {
+        font-size: 38px;
+    }
+
+    .testimonial__card {
+        place-items: center;
+        text-align: center;
+    }
+
+    .testimonial__card.third {
+        grid-column: span 2;
+        max-width: 400px;
+        justify-self: center;
+    }
+
+    .pricing {
+        padding: 4rem 2rem;
+    }
+
+    .pricing__title {
+        font-size: 32px;
+    }
+
+    .pricing__subtitle {
+        font-size: 15.5px;
+    }
+
+    .pricing__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .pricing__card:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+
+    .pricing__card--popular {
+        transform: scale(1.04);
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -245,6 +291,59 @@
         font-size: 1.35rem;
     }
 
+    .testimonials {
+        padding: 4rem 0;
+    }
+
+    .testimonials__content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .testimonial__card.third {
+        grid-column: initial;
+    }
+
+    .section__title {
+        font-size: 44px;
+    }
+
+    .testimonial__card {
+        padding: 32px;
+    }
+
+    .pricing {
+        padding: 4rem 3rem;
+    }
+
+    .pricing__title {
+        font-size: 36px;
+    }
+
+    .pricing__subtitle {
+        font-size: 16px;
+    }
+
+    .pricing__cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .pricing__card {
+        flex: 1;
+        max-width: 340px;
+    }
+
+    .pricing__card--popular {
+        transform: scale(1.08);
+    }
+
+    .pricing__card:hover {
+        transform: translateY(-8px);
+    }
 }
 
 @media screen and (min-width:1280px) {
@@ -302,4 +401,58 @@
     .how .container {
         margin-inline: auto;
     }
+
+    .testimonials__container {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    .testimonials__content {
+        gap: 40px;
+    }
+
+    .testimonial__card {
+        padding: 40px;
+    }
+
+    .pricing {
+        padding: 4rem 3rem;
+    }
+
+    .pricing__container {
+        max-width: 1200px;
+    }
+
+    .pricing__title {
+        font-size: 40px;
+    }
+
+    .pricing__subtitle {
+        font-size: 17px;
+    }
+
+    .pricing__cards {
+        gap: 30px;
+    }
+
+    .pricing__card {
+        padding: 30px;
+        max-width: 360px;
+    }
+
+    .amount {
+        font-size: 44px;
+    }
+
+    /* Stronger featured card effect */
+    .pricing__card--popular {
+        transform: scale(1.1);
+        box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+        border-color: #6366F1;
+    }
+
+    .pricing__card--popular:hover {
+        transform: scale(1.12);
+    }
+
 }

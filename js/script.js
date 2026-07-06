@@ -1,10 +1,11 @@
-
-
 const navMenu = document.getElementById('nav-menu');
 const menuButton = document.querySelector('.menu');
 const closeButton = document.querySelector('.close');
 const navLink = document.querySelectorAll('.nav__link');
-const navLinks = document.querySelectorAll('a[href^="#"]');
+const toggle = document.querySelector(".toggle input");
+const prices = document.querySelectorAll(".amount");
+const periods = document.querySelectorAll(".period");
+
 
 menuButton.addEventListener('click', () => {
     navMenu.classList.add('show-menu');
@@ -27,3 +28,23 @@ window.addEventListener("scroll", () => {
     header.classList.toggle("scroll-header", window.scrollY > 20);
 });
 
+toggle.addEventListener("change", () => {
+    const isYearly = toggle.checked;
+
+    prices.forEach(price => {
+        price.classList.add("fade-out");
+
+        setTimeout(() => {
+            const monthly = price.getAttribute("data-monthly");
+            const yearly = price.getAttribute("data-yearly");
+
+            price.textContent = isYearly ? yearly : monthly;
+
+            price.classList.remove("fade-out");
+        }, 150);
+    });
+
+    periods.forEach(period => {
+        period.textContent = isYearly ? "/yr" : "/mo";
+    });
+});
