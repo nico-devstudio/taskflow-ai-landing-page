@@ -64,6 +64,30 @@
     .dashboard__img {
         max-width: 700px;
     }
+
+    .how__container {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .how__arrow {
+        display: none;
+    }
+
+    .section__title {
+        font-size: 2.5rem;
+    }
+
+    .how__card {
+        height: 100%;
+        text-align: center;
+    }
+
+    .how__icon {
+        margin-inline: auto;
+    }
+
 }
 
 @media screen and (min-width:1024px) {
@@ -73,7 +97,6 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         width: 100%;
-
     }
 
 
@@ -189,6 +212,39 @@
         max-width: 80%;
     }
 
+    .how {
+        padding-block: 4rem;
+    }
+
+    .section__title {
+        font-size: 3rem;
+    }
+
+    .section__description {
+        font-size: 1.05rem;
+    }
+
+    .how__container {
+        gap: 2rem;
+    }
+
+    .how__card {
+        padding: 2.5rem;
+    }
+
+    .how__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .how__icon i {
+        font-size: 2.25rem;
+    }
+
+    .how__title {
+        font-size: 1.35rem;
+    }
+
 }
 
 @media screen and (min-width:1280px) {
@@ -240,6 +296,10 @@
     }
 
     .dashboard__container {
+        margin-inline: auto;
+    }
+
+    .how .container {
         margin-inline: auto;
     }
 }
