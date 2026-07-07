@@ -5,36 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <title>TaskFlow AI</title>
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <div class="nav__logo">
-                <img src="assets/Taskflow AI logo.png" alt="logo">
-                <a href="#home">TaskFlow AI</a>
-            </div>
-            <div class="nav__menu" id="nav-menu">
-                <div class="nav__links">
-                    <a href="#" class="nav__link">Features</a>
-                    <a href="#" class="nav__link">Pricing</a>
-                    <a href="#" class="nav__link">Templates</a>
-                    <a href="#" class="nav__link">Docs</a>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" aria-label="Primary navigation">
+
+                <!-- Logo -->
+                <a href="#home" class="nav__logo">
+                    <img src="assets/logos/Taskflow AI logo.png" alt="TaskFlow AI logo">
+                    <span>TaskFlow AI</span>
+                </a>
+
+                <!-- Navigation -->
+                <div class="nav__menu" id="nav-menu">
+
+                    <ul class="nav__list">
+
+                        <li>
+                            <a href="#features" class="nav__link">
+                                Features
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#pricing" class="nav__link">
+                                Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#templates" class="nav__link">
+                                Templates
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#docs" class="nav__link">
+                                Docs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <div class="nav__actions">
+
+                        <a href="#" class="nav__signin">
+                            Sign in
+                        </a>
+
+                        <a href="#" class="button">
+                            Get Started Free
+                        </a>
+
+                    </div>
+
+                    <button class="nav__close" id="nav-close" aria-label="Close menu">
+                        <i class="ri-close-large-line"></i>
+                    </button>
+
                 </div>
-                <div class="nav__sign">
-                    <a href="#" class="nav__link">Sign in</a>
-                    <a href="#" class="nav__link button">Get Started Free</a>
-                </div>
-                <i class="ri-close-large-line close"></i>
-            </div>
 
-            <i class="ri-menu-line menu"></i>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="nav-menu">
+                    <i class="ri-menu-line"></i>
+                </button>
 
-
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main class="main">
@@ -603,7 +646,156 @@
 
             </div>
         </section>
+
+        <!--==================== CTA ====================-->
+        <section class="cta">
+            <div class="cta__container">
+
+                <span class="cta__badge">
+                    🚀 Start Building Smarter Today
+                </span>
+
+                <h2 class="cta__title">
+                    Turn your workflow into an AI-powered system
+                </h2>
+
+                <p class="cta__description">
+                    Join thousands of users automating tasks, boosting productivity,
+                    and scaling faster with TaskFlow AI.
+                </p>
+
+                <div class="cta__buttons">
+                    <a href="#" class="btn btn-primary">Get Started Free</a>
+                    <a href="#" class="btn btn-secondary">View Demo</a>
+                </div>
+
+                <div class="cta__trust">
+                    <span>✔ No credit card required</span>
+                    <span>✔ Cancel anytime</span>
+                    <span>✔ Trusted by 10,000+ users</span>
+                </div>
+
+            </div>
+
+            <!-- Decorative glow element -->
+            <div class="cta__glow"></div>
+        </section>
     </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+
+            <!-- Logo & Description -->
+            <div class="footer__brand">
+                <a href="#" class="footer__logo">
+                    <img src="assets/logos/Taskflow AI logo.png" alt="taskflow-logo">
+                    <span>TaskFlow AI</span>
+                </a>
+
+                <p class="footer__description">
+                    AI-powered project management that helps teams organize tasks,
+                    automate workflows, and collaborate faster.
+                </p>
+            </div>
+
+            <!-- Product Links -->
+            <div class="footer__content">
+                <h3 class="footer__title">Product</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#features" class="footer__link">Features</a></li>
+                    <li><a href="#pricing" class="footer__link">Pricing</a></li>
+                    <li><a href="#" class="footer__link">Integrations</a></li>
+                    <li><a href="#" class="footer__link">Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Links -->
+            <div class="footer__content">
+                <h3 class="footer__title">Company</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">About</a></li>
+                    <li><a href="#" class="footer__link">Careers</a></li>
+                    <li><a href="#contact" class="footer__link">Contact</a></li>
+                    <li><a href="#" class="footer__link">Privacy</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="footer__content">
+                <h3 class="footer__title">Resources</h3>
+
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Blog</a></li>
+                    <li><a href="#" class="footer__link">Help Center</a></li>
+                    <li><a href="#" class="footer__link">API Docs</a></li>
+                    <li><a href="#" class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer__newsletter">
+                <h3 class="footer__title">Stay Updated</h3>
+
+                <p class="footer__text">
+                    Get the latest AI productivity tips and product updates.
+                </p>
+
+                <form action="" class="footer__form">
+                    <input type="email" placeholder="Enter your email" class="footer__input" required>
+
+                    <button type="submit" class="button footer__button">
+                        Subscribe
+                    </button>
+                </form>
+
+                <!-- Social Icons -->
+
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="GitHub">
+                    <i class="ri-github-line"></i>
+                </a>
+
+                <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                    <i class="ri-linkedin-box-line"></i>
+                </a>
+
+                <a href="#" class="footer__social-link" aria-label="Twitter">
+                    <i class="ri-twitter-x-line"></i>
+                </a>
+
+                <a href="#" class="footer__social-link" aria-label="Discord">
+                    <i class="ri-discord-line"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer__bottom">
+            <div class="container footer__bottom-container">
+
+                <p class="footer__copy">
+                    &#169; 2026 TaskFlow AI. All rights reserved.
+                </p>
+
+                <a href="#" class="footer__developer">
+
+                    <span>Designed & Developed by</span>
+                    <img src="assets/logos/logo-white.png" alt="NicoDev Studio Logo" class="footer__developer-logo">
+                </a>
+
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Terms</a>
+                    <a href="#" class="footer__legal-link">Privacy</a>
+                    <a href="#" class="footer__legal-link">Cookies</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 

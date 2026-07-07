@@ -9,9 +9,12 @@
         --text-xs: 0.85rem;
     }
 
-    .nav__menu {
-        padding-top: 10rem;
+    .nav {
+        height: 5rem;
+    }
 
+    .nav__logo img {
+        width: 44px;
     }
 
     .hero__info {
@@ -134,54 +137,126 @@
     .pricing__card--popular {
         transform: scale(1.04);
     }
+
+    .cta__title {
+        font-size: 34px;
+    }
+
+    .cta__description {
+        font-size: 16px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta__trust {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .cta__buttons {
+        width: 80%;
+        justify-self: center;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+        text-align: center;
+        place-items: center;
+    }
+
+    .footer__logo {
+        justify-self: center;
+    }
+
+    .footer__form {
+        grid-template-columns: 1fr auto;
+    }
+
+    .footer__button {
+        width: max-content;
+    }
+
+    .footer__bottom-container {
+        text-align: initial;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .footer__developer {
+        justify-content: end;
+    }
+
+    .footer__legal {
+        grid-column: span 2;
+        justify-content: center;
+    }
+
+    .footer__newsletter {
+        grid-column: span 2;
+    }
+
+    .footer__social {
+        grid-column: 1 / -1;
+        ;
+
+    }
+
+
+
 }
 
 @media screen and (min-width:1024px) {
     .nav {
-        display: flex;
-        background-color: rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        width: 100%;
+        height: 5.5rem;
     }
 
-
-    .nav__menu {
-        flex: 3;
-        flex-direction: row;
-        background-color: initial;
-        height: initial;
-        padding-top: 0;
-        position: static;
-        padding-right: 1.3rem;
-        gap: 0;
-        transform: none;
-    }
-
-    .button {
-        padding: .5rem 2.5rem;
-    }
-
-    .menu,
-    .close,
-    .nav__links:after {
+    .nav__toggle,
+    .nav__close {
         display: none;
     }
 
-    .nav__links,
-    .nav__sign {
-        flex-direction: row;
-        justify-content: end;
-        font-size: initial;
-        width: 100%;
+    .nav__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
     }
 
-    .nav__logo {
-        flex: 1;
-        background-color: initial;
-        backdrop-filter: unset;
-        box-shadow: none;
-        border-bottom: none;
+    .nav__list {
+        display: flex;
+        align-items: center;
+        column-gap: 2.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav__link {
+        text-decoration: none;
+        font-weight: 500;
+        transition: color .3s;
+    }
+
+    .nav__link:hover {
+        color: var(--first-color);
+    }
+
+    .nav__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+    }
+
+    .nav__signin {
+        text-decoration: none;
+        font-weight: 500;
+        transition: color .3s;
+    }
+
+    .nav__signin:hover {
+        color: var(--first-color);
     }
 
     .hero__container {
@@ -344,20 +419,104 @@
     .pricing__card:hover {
         transform: translateY(-8px);
     }
+
+    .cta {
+        padding: 4rem 2rem;
+    }
+
+    .cta__title {
+        font-size: 42px;
+    }
+
+    .cta__buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cta__description {
+        font-size: 18px;
+    }
+
+
+    .footer__newsletter {
+        grid-column: initial;
+    }
+
+    .footer {
+        padding-top: 6rem;
+    }
+
+    .footer__logo {
+        justify-self: start;
+    }
+
+    .footer__container {
+        grid-template-columns: 2fr repeat(3, 1fr) 2fr;
+        column-gap: 3rem;
+        text-align: left;
+        align-items: start;
+    }
+
+    .footer__description {
+        max-width: 340px;
+    }
+
+    .footer__form {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: unset;
+    }
+
+    .footer__button {
+        justify-self: center;
+    }
+
+    .footer__social {
+        margin-top: 1rem;
+        gap: 2rem;
+    }
+
+    .footer__bottom {
+        margin-top: 2rem;
+    }
+
+    .footer__social-link {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+    }
+
+
+
 }
 
 @media screen and (min-width:1280px) {
-
-    .nav {
+    .header.scroll-header {
         width: 90%;
-        margin-inline: auto;
-        max-width: 1120px;
+        left: 50%;
+        top: 3%;
+        transform: translateX(-50%);
         border-radius: var(--radius-md);
-        margin-top: 1rem;
+
+        background: rgba(11, 18, 32, 0.84);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
     }
 
-    .nav__link.button {
-        padding-inline: 1rem;
+    .nav {
+        height: 6rem;
+    }
+
+    .nav__menu {
+        column-gap: 4rem;
+    }
+
+    .nav__list {
+        column-gap: 3rem;
+    }
+
+    .container {
+        margin-inline: auto;
     }
 
     .social {
@@ -453,6 +612,72 @@
 
     .pricing__card--popular:hover {
         transform: scale(1.12);
+    }
+
+    .cta {
+        padding: 140px 40px;
+    }
+
+    .cta__container {
+        max-width: 1100px;
+    }
+
+    /* Layout becomes more spacious and premium */
+    .cta__title {
+        font-size: 48px;
+        line-height: 1.1;
+    }
+
+    .cta__description {
+        font-size: 19px;
+        max-width: 650px;
+    }
+
+    /* Buttons feel more "centered SaaS hero style" */
+    .cta__buttons {
+        gap: 16px;
+    }
+
+    .btn {
+        padding: 14px 22px;
+        font-size: 16px;
+    }
+
+    /* Trust row becomes cleaner and horizontal */
+    .cta__trust {
+        font-size: 13px;
+        gap: 28px;
+        margin-top: 10px;
+    }
+
+    /* Glow becomes more dramatic and centered */
+    .cta__glow {
+        width: 600px;
+        height: 600px;
+        top: -180px;
+        opacity: 0.3;
+        filter: blur(140px);
+    }
+
+    .footer__container {
+        column-gap: 4rem;
+        margin-inline: auto;
+    }
+
+    .footer__description {
+        max-width: 380px;
+    }
+
+    .footer__title {
+        margin-bottom: .5rem;
+    }
+
+    .footer__bottom {
+        margin-top: 5rem;
+    }
+
+    .footer__bottom-container {
+        margin-inline: auto;
     }
 
 }
