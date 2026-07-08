@@ -1,81 +1,117 @@
 :root {
-    /* =====================
+  /* =====================
      BRAND COLORS
   ====================== */
-    --primary: #3b82f6;
-    /* main blue */
-    --primary-dark: #1d4ed8;
-    --accent: #06b6d4;
-    /* cyan glow */
-    --accent-purple: #8b5cf6;
+  --primary: #3b82f6;
+  --primary-hover: #1d4ed8;
+  --accent: #06b6d4;
+  --accent-purple: #8b5cf6;
 
-    /* =====================
+  /* =====================
      BACKGROUND COLORS
   ====================== */
-    --bg: rgb(11, 18, 32);
-    /* main dark background */
-    --bg-soft: #0f172a;
-    /* sections */
-    --card: #111827;
-    /* cards */
-    --glass: rgba(255, 255, 255, 0.06);
+  --bg-primary: #0b1220;
+  --bg-secondary: #111827;
+  --bg-surface: #ffffff;
+  /* White surfaces */
+  --bg-card: #f9fafb;
+  /* Slightly tinted cards, if desired */
 
-    /* =====================
+  /* =====================
      TEXT COLORS
   ====================== */
-    --text-color: #e5e7eb;
-    /* main text */
-    --text-muted: #94a3b8;
-    /* secondary text */
-    --text-dark: #0f172a;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-inverse: #111827;
 
-    --title-color: #0F172A;
-    --text-color-white-section: #475569;
-    --text-color-light: #64748B;
-    --white-color: #FFFFFF;
+  /* secondary text */
+  --title-color: #0F172A;
+  --text-color-light: #64748B;
+  --white-color: #FFFFFF;
 
-    --first-color: #4F46E5;
-    --border-color: #E2E8F0;
-    --body-color: #F8FAFC;
-    --badge-bg: #EFF6FF;
-    /* =====================
+  --border-color: rgba(255, 255, 255, .12);
+  --body-color: #F8FAFC;
+  --badge-bg: #EFF6FF;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  /* =====================
      STATES
   ====================== */
-    --success: #22c55e;
-    --warning: #f59e0b;
-    --error: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
 
-    /* Typography */
+  /* Typography */
 
-    --font-main: "Inter", system-ui, sans-serif;
+  --font-main: "Inter", system-ui, sans-serif;
 
-    --h1: 2.5rem;
-    --h2: 2rem;
-    --h3: 1.5rem;
-    --text-lg: 1.125rem;
-    --text: 1rem;
-    --text-sm: 0.875rem;
-    --text-xs: 0.75rem;
+  --h1: 2.5rem;
+  --h2: 2rem;
+  --h3: 1.5rem;
+  --text-lg: 1.125rem;
+  --text: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
 
-    --line-height: 1.2;
+  --line-height-heading: 1.2;
 
-    --header-height: 5rem;
+  --line-height-body: 1.7;
 
-    /* Gradients */
+  --header-height: 5rem;
 
-    --gradient-primary: linear-gradient(135deg, #3b82f6, #06b6d4);
-    --gradient-dark: linear-gradient(180deg, #0b1220, #0f172a);
-    --gradient-glow: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 60%);
+  /* Gradients */
 
-    /* Border Radius */
+  --gradient-primary: linear-gradient(135deg, #3b82f6, #06b6d4);
+  --gradient-dark: linear-gradient(180deg, #0b1220, #0f172a);
+  --gradient-glow: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 60%);
 
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
-    --radius-xl: 28px;
-    --radius-full: 999px;
+  /* Border Radius */
 
-    --cyan-glow: #00e0ff;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
 
+  --cyan-glow: #00e0ff;
+
+  /* =====================
+       SPACING
+    ====================== */
+  --space-xs: 0.5rem;
+  /* 8px */
+  --space-sm: 1rem;
+  /* 16px */
+  --space-md: 1.5rem;
+  /* 24px */
+  --space-lg: 2rem;
+  /* 32px */
+  --space-xl: 3rem;
+  /* 48px */
+  --space-2xl: 4rem;
+  /* 64px */
+  --space-3xl: 6rem;
+  /* 96px */
+
+
+  /* =====================
+       SHADOWS
+    ====================== */
+
+  /* Small UI elements */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  /* Cards */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  /* Elevated cards */
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+  /* Hero sections / modals */
+  --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.20);
+
+  /* Brand glow */
+  --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.25);
 
 }
