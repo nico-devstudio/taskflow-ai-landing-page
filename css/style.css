@@ -1,92 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
-:root {
-    /* =====================
-     BRAND COLORS
-  ====================== */
-    --primary: #3b82f6;
-    /* main blue */
-    --primary-dark: #1d4ed8;
-    --accent: #06b6d4;
-    /* cyan glow */
-    --accent-purple: #8b5cf6;
-
-    /* =====================
-     BACKGROUND COLORS
-  ====================== */
-    --bg: rgb(11, 18, 32);
-    /* main dark background */
-    --bg-soft: #0f172a;
-    /* sections */
-    --card: #111827;
-    /* cards */
-    --glass: rgba(255, 255, 255, 0.06);
-
-    /* =====================
-     TEXT COLORS
-  ====================== */
-    --text-color: #e5e7eb;
-    /* main text */
-    --text-muted: #94a3b8;
-    /* secondary text */
-    --text-dark: #0f172a;
-
-    --title-color: #0F172A;
-    --text-color-white-section: #475569;
-    --text-color-light: #64748B;
-    --white-color: #FFFFFF;
-
-    --first-color: #4F46E5;
-    --border-color: #E2E8F0;
-    --container-color: #FFFFFF;
-    --body-color: #F8FAFC;
-
-    /* =====================
-     STATES
-  ====================== */
-    --success: #22c55e;
-    --warning: #f59e0b;
-    --error: #ef4444;
-
-    /* Typography */
-
-    --font-main: "Inter", system-ui, sans-serif;
-
-    --h1: 2.5rem;
-    --h2: 2rem;
-    --h3: 1.5rem;
-    --text-lg: 1.125rem;
-    --text: 1rem;
-    --text-sm: 0.875rem;
-    --text-xs: 0.75rem;
-
-    --line-height: 1.2;
-
-    --header-height: 5rem;
-
-    /* Gradients */
-
-    --gradient-primary: linear-gradient(135deg, #3b82f6, #06b6d4);
-    --gradient-dark: linear-gradient(180deg, #0b1220, #0f172a);
-    --gradient-glow: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 60%);
-
-    /* Border Radius */
-
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
-    --radius-xl: 28px;
-    --radius-full: 999px;
-
-    --cyan-glow: #00e0ff;
-
-
-}
-
-
-
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -132,21 +46,20 @@ body {
     min-height: 100vh;
 }
 
-body::before {
-    content: '';
-    position: relative;
-    overflow: hidden;
-    top: 10%;
-    left: 60%;
-    width: 30%;
-    height: 30%;
-    background-color: rgba(6, 182, 212, 0.5);
-    /* Cyan glow color */
-    filter: blur(100px);
-    /* This makes it a soft, diffuse blob */
-    border-radius: 50%;
-    z-index: 0;
-    /* Place behind other content */
+.section__title {
+    color: var(--title-color);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-size: var(--h2);
+}
+
+.section__description {
+    max-width: 34rem;
+    margin: 0 auto;
+    color: var(--text-color-light);
+    line-height: 1.7;
+    font-size: var(--text);
 }
 
 .button {
@@ -466,7 +379,7 @@ body::before {
     opacity: 1;
 }
 
-.logo {
+.social__logo {
     place-items: center;
 }
 
@@ -520,17 +433,6 @@ body::before {
     font-size: 1rem;
 }
 
-.features__title {
-    margin-bottom: 1rem;
-    color: var(--title-color);
-    line-height: var(--line-height);
-    font-size: var(--h2);
-}
-
-.features__description {
-    color: var(--text-color-light);
-    line-height: 1.7;
-}
 
 .features__content {
     display: grid;
@@ -594,7 +496,7 @@ body::before {
     padding: 3rem 0;
     position: relative;
     overflow: hidden;
-    background: #FFFFFF;
+    background: var(--white-color);
     isolation: isolate;
 }
 
@@ -665,19 +567,6 @@ body::before {
     font-size: 1rem;
 }
 
-.dashboard__title {
-    font-size: var(--h2);
-    color: var(--title-color);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.dashboard__description {
-    color: var(--text-color-white-section);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
 .dashboard__image {
     display: flex;
     justify-content: center;
@@ -702,7 +591,7 @@ body::before {
 
 .how {
     padding-block: 3rem;
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
 }
 
 .how .section__header {
@@ -715,8 +604,8 @@ body::before {
     align-items: center;
     gap: .5rem;
     padding: .5rem 1rem;
-    background-color: #EFF6FF;
-    color: #2563EB;
+    background-color: var(--badge-bg);
+    color: var(--first-color);
     border-radius: var(--radius-full);
     font-size: .875rem;
     font-weight: 600;
@@ -725,21 +614,6 @@ body::before {
 
 .section__badge i {
     font-size: 1rem;
-}
-
-.section__title {
-    font-size: 2rem;
-    color: #0F172A;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.section__description {
-    max-width: 34rem;
-    margin: 0 auto;
-    color: #64748B;
-    line-height: 1.7;
 }
 
 
@@ -753,8 +627,8 @@ body::before {
 .how__card {
     position: relative;
     padding: 2rem;
-    background-color: #FFFFFF;
-    border: 1px solid #E2E8F0;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
     border-radius: 1.25rem;
     transition: .3s;
 }
@@ -776,8 +650,8 @@ body::before {
     display: grid;
     place-items: center;
 
-    background-color: #2563EB;
-    color: #FFFFFF;
+    background-color: var(--primary);
+    color: var(--white-color);
 
     border-radius: 50%;
     font-size: .875rem;
@@ -792,8 +666,8 @@ body::before {
     display: grid;
     place-items: center;
 
-    background-color: #EFF6FF;
-    color: #2563EB;
+    background-color: var(--badge-bg);
+    color: var(--primary);
 
     border-radius: 1rem;
     margin-bottom: 1.5rem;
@@ -806,13 +680,13 @@ body::before {
 /*=============== CONTENT ===============*/
 .how__title {
     font-size: 1.25rem;
-    color: #0F172A;
+    color: var(--text-dark);
     margin-bottom: .75rem;
     font-weight: 600;
 }
 
 .how__text {
-    color: #64748B;
+    color: var(--text-color-light);
     line-height: 1.8;
 }
 
@@ -825,14 +699,14 @@ body::before {
 
 .how__arrow i {
     font-size: 2rem;
-    color: #CBD5E1;
+    color: var(--border-color);
     transform: rotate(90deg);
 }
 
 /*==================== TESTIMONIALS ====================*/
 
 .testimonials {
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
     padding: 4rem 0;
     position: relative;
     overflow: hidden;
@@ -843,31 +717,6 @@ body::before {
     margin-bottom: 60px;
 }
 
-.section__subtitle {
-    display: block;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #6366F1;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.section__title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #0F172A;
-    margin-bottom: 12px;
-    line-height: 1.2;
-}
-
-.section__description {
-    font-size: 16px;
-    color: var(--text-color-light);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
 
 .testimonials__content {
     display: grid;
@@ -877,7 +726,7 @@ body::before {
 
 .testimonial__card {
     background-color: var(--white-color);
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 28px;
     transition: 0.3s ease;
@@ -919,7 +768,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: var(--white-color);
     font-weight: 600;
     font-size: 14px;
 }
@@ -929,17 +778,17 @@ body::before {
 .testimonial__info h3 {
     font-size: 15px;
     font-weight: 600;
-    color: #0F172A;
+    color: var(--text-dark);
     margin-bottom: 2px;
 }
 
 .testimonial__info span {
     font-size: 13px;
-    color: #64748B;
+    color: var(--text-color-light);
 }
 
 .pricing {
-    background: #F8FAFC;
+    background: var(--body-color);
     padding: 3rem 1.5rem;
 }
 
@@ -953,19 +802,6 @@ body::before {
     margin-bottom: 40px;
 }
 
-.pricing__title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #0F172A;
-    margin-bottom: 10px;
-}
-
-.pricing__subtitle {
-    font-size: 15px;
-    color: #64748B;
-    line-height: 1.6;
-}
-
 .pricing__toggle {
     margin-top: 20px;
     display: flex;
@@ -973,7 +809,7 @@ body::before {
     justify-content: center;
     gap: 12px;
     font-size: 14px;
-    color: #475569;
+    color: var(--text-muted);
 }
 
 .toggle {
@@ -989,7 +825,7 @@ body::before {
 .toggle__slider {
     position: absolute;
     inset: 0;
-    background: #CBD5E1;
+    background: var(--border-color);
     border-radius: var(--radius-full);
     cursor: pointer;
     transition: 0.3s;
@@ -1000,7 +836,7 @@ body::before {
     position: absolute;
     width: 18px;
     height: 18px;
-    background: #fff;
+    background: var(--white-color);
     border-radius: 50%;
     top: 3px;
     left: 3px;
@@ -1009,7 +845,7 @@ body::before {
 }
 
 .toggle input:checked+.toggle__slider {
-    background: #6366F1;
+    background: var(--primary);
 }
 
 .toggle input:checked+.toggle__slider::before {
@@ -1017,7 +853,7 @@ body::before {
 }
 
 .toggle__save {
-    color: #6366F1;
+    color: var(--primary);
     font-weight: 500;
 }
 
@@ -1048,7 +884,7 @@ body::before {
 .pricing__plan {
     font-size: 18px;
     font-weight: 600;
-    color: #0F172A;
+    color: var(--text-dark);
     margin-bottom: 10px;
 }
 
@@ -1059,18 +895,18 @@ body::before {
 
 .currency {
     font-size: 18px;
-    color: #64748B;
+    color: var(--text-color-light);
 }
 
 .amount {
     font-size: 40px;
     font-weight: 700;
-    color: #0F172A;
+    color: var(--text-dark);
 }
 
 .period {
     font-size: 14px;
-    color: #64748B;
+    color: var(--text-color-light);
 }
 
 /* FEATURES */
@@ -1082,7 +918,7 @@ body::before {
 
 .pricing__features li {
     font-size: 14px;
-    color: #475569;
+    color: var(--text-color-light);
     margin-bottom: 10px;
 }
 
@@ -1091,9 +927,9 @@ body::before {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #CBD5E1;
-    background: #fff;
-    color: #0F172A;
+    border: 1px solid var(--border-color);
+    background: var(--white-color);
+    color: var(--text-dark);
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
@@ -1195,23 +1031,6 @@ body::before {
     backdrop-filter: blur(10px);
 
     margin-bottom: 16px;
-}
-
-/* Title */
-.cta__title {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.2;
-
-    margin-bottom: 12px;
-}
-
-.cta__description {
-    font-size: 15px;
-    line-height: 1.6;
-    opacity: 0.85;
-
-    margin-bottom: 24px;
 }
 
 /* Buttons stack (mobile first) */

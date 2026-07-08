@@ -10,6 +10,7 @@ const periods = document.querySelectorAll(".period");
 
 menuButton.addEventListener('click', () => {
     navMenu.classList.add('show-menu');
+    menuButton.setAttribute("aria-expanded", "true");
 
     setTimeout(() => {
         const firstLink = navMenu.querySelector("a, button");
@@ -19,6 +20,8 @@ menuButton.addEventListener('click', () => {
 
 const removeMenu = () => {
     navMenu.classList.remove('show-menu');
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.focus();
 }
 closeButton.addEventListener('click', removeMenu)
 
@@ -63,12 +66,6 @@ toggle.addEventListener("change", () => {
     setTimeout(() => {
         isAnimating = false;
     }, 300);
-});
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        navMenu.classList.remove("show-menu");
-    }
 });
 
 const focusableElements = 'a, button, input, [tabindex]:not([tabindex="-1"])';
