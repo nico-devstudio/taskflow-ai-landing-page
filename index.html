@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TaskFlow AI helps teams automate workflows, organize projects, and boost productivity with AI-powered
-    project management.">
+    <meta name="description"
+        content="TaskFlow AI helps teams automate workflows, manage projects, and boost productivity with AI-powered project management.">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="icon" href="assets/logos/favicon.ico" sizes="any">
     <link rel="stylesheet" href="css/variables.css">
@@ -20,7 +20,7 @@
 
             <!-- Logo -->
             <a href="#home" class="nav__logo">
-                <img src="assets/logos/Taskflow AI logo.png" alt="TaskFlow AI logo" fetchpriority="high"
+                <img src="assets/logos/taskflow-ai-logo.png" alt="TaskFlow AI logo" fetchpriority="high"
                     decoding="async">
                 <span>TaskFlow AI</span>
             </a>
@@ -43,13 +43,13 @@
                     </li>
 
                     <li>
-                        <a href="#" class="nav__link">
+                        <a href="/templates" class="nav__link">
                             Templates
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" class="nav__link">
+                        <a href="/docs" class="nav__link">
                             Docs
                         </a>
                     </li>
@@ -58,38 +58,38 @@
 
                 <div class="nav__actions">
 
-                    <a href="#" class="nav__signin">
+                    <a href="/login" class="nav__signin">
                         Sign in
                     </a>
 
-                    <a href="#" class="button">
+                    <a href="/signup" class="button">
                         Get Started Free
                     </a>
 
                 </div>
 
-                <button class="nav__close" id="nav-close" aria-label="Close menu">
-                    <i class="ri-close-large-line"></i>
+                <button class="nav__close" id="nav-close" type="button" aria-label="Close menu">
+                    <i class="ri-close-large-line" aria-hidden="true"></i>
                 </button>
 
             </div>
 
-            <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"
+            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
                 aria-controls="nav-menu">
-                <i class="ri-menu-line"></i>
+                <i class="ri-menu-line" aria-hidden="true"></i>
             </button>
 
         </nav>
     </header>
 
-    <main class="main">
+    <main class="main" id="main">
         <section class="hero section" id="home">
             <div class="hero__container container grid">
 
                 <div class="hero__content">
-                    <span class="hero__badge">
-                        ✨ AI-Powered Productivity
-                    </span>
+                    <p class="hero__badge">
+                        <span aria-hidden="true">✨</span> AI-Powered Productivity
+                    </p>
 
                     <h1 class="hero__title">
                         Automate Your Workflow.
@@ -103,12 +103,12 @@
                     </p>
 
                     <div class="hero__buttons">
-                        <a href="#" class="button">
+                        <a href="/signup" class="button">
                             Start Free Trial
                         </a>
 
-                        <a href="#" class="button button--ghost">
-                            <i class="ri-play-circle-line"></i>
+                        <a href="/demo" class="button button--ghost">
+                            <i class="ri-play-circle-line" aria-hidden="true"></i>
                             Watch Demo
                         </a>
                     </div>
@@ -122,17 +122,17 @@
                 <!-- Dashboard Preview -->
                 <div class="hero__image">
 
-                    <div class="hero__dashboard">
-                        <img src="assets/Dashboard.png" width="1200" height="720" alt="TaskFlow AI dashboard preview"
+                    <figure class="hero__dashboard">
+                        <img src="assets/dashboard.png" width="1200" height="720" alt="TaskFlow AI dashboard preview"
                             loading="eager" decoding="async" fetchpriority="high">
-                    </div>
+                    </figure>
 
                 </div>
 
             </div>
         </section>
 
-        <section class=" social section">
+        <section class="social section">
 
             <div class="social__container container">
 
@@ -142,19 +142,20 @@
 
                 <ul class="social__logos">
 
-                    <li class="social__logo"><img src="assets/logos/NovaTech.png" alt="NovaTech">Novatech
+                    <li class="social__logo"><img src="assets/logos/NovaTech.png" alt="NovaTech logo">Novatech
                     </li>
 
-                    <li class="social__logo"><img src="assets/logos/CloudSync.png" alt="CloudSync">CloudSync
+                    <li class="social__logo"><img src="assets/logos/CloudSync.png" alt="CloudSync logo">CloudSync
                     </li>
 
-                    <li class="social__logo"><img src="assets/logos/FlowBase.png" alt="FlowBase">FlowBase
+                    <li class="social__logo"><img src="assets/logos/FlowBase.png" alt="FlowBase logo">FlowBase
                     </li>
 
-                    <li class="social__logo"><img src="assets/logos/PixelCore.png" alt="PixelCore">PixelCore
+                    <li class="social__logo"><img src="assets/logos/PixelCore.png" alt="PixelCore logo">PixelCore
                     </li>
 
-                    <li class="social__logo"><img src="assets/logos/DataSphere.png" alt="DataSphere">DataSphere</li>
+                    <li class="social__logo"><img src="assets/logos/DataSphere.png" alt="DataSphere logo">DataSphere
+                    </li>
 
                 </ul>
 
@@ -187,7 +188,7 @@
 
                 <div class="section__header">
                     <span class="section__badge">
-                        <i class="ri-sparkling-line"></i>
+                        <i class="ri-sparkling-line" aria-hidden="true"></i>
                         Features
                     </span>
 
@@ -207,7 +208,7 @@
                     <!-- Feature 1 -->
                     <article class="features__card">
                         <div class="features__icon">
-                            <i class="ri-robot-2-line"></i>
+                            <i class="ri-robot-2-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="features__card-title">
@@ -223,7 +224,7 @@
                     <!-- Feature 2 -->
                     <article class="features__card">
                         <div class="features__icon">
-                            <i class="ri-flashlight-line"></i>
+                            <i class="ri-flashlight-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="features__card-title">
@@ -239,7 +240,7 @@
                     <!-- Feature 3 -->
                     <article class="features__card">
                         <div class="features__icon">
-                            <i class="ri-calendar-check-line"></i>
+                            <i class="ri-calendar-check-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="features__card-title">
@@ -255,7 +256,7 @@
                     <!-- Feature 4 -->
                     <article class="features__card">
                         <div class="features__icon">
-                            <i class="ri-team-line"></i>
+                            <i class="ri-team-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="features__card-title">
@@ -271,7 +272,7 @@
                     <!-- Feature 5 -->
                     <article class="features__card">
                         <div class="features__icon">
-                            <i class="ri-bar-chart-box-line"></i>
+                            <i class="ri-bar-chart-box-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="features__card-title">
@@ -287,7 +288,7 @@
                     <!-- Feature 6 -->
                     <article class="features__card">
                         <div class="features__icon">
-                            <i class="ri-shield-check-line"></i>
+                            <i class="ri-shield-check-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="features__card-title">
@@ -309,12 +310,12 @@
         <section class="dashboard section" id="dashboard">
             <div class="dashboard__container container">
 
-                <div class="glow-bubble glow-bubble--blue"></div>
-                <div class="glow-bubble glow-bubble--purple"></div>
+                <div class="glow-bubble glow-bubble--blue" aria-hidden="true"></div>
+                <div class="glow-bubble glow-bubble--purple" aria-hidden="true"></div>
 
                 <div class="section__header">
                     <span class="section__badge">
-                        <i class="ri-dashboard-line"></i>
+                        <i class="ri-dashboard-line" aria-hidden="true"></i>
                         Powerful Dashboard
                     </span>
 
@@ -330,22 +331,22 @@
                     </p>
                 </div>
 
-                <div class="dashboard__image">
-                    <img src="assets/Dashboard Showcase.png" alt="TaskFlow AI Dashboard" class="dashboard__img"
+                <figure class="dashboard__image">
+                    <img src="assets/dashboard-showcase.png" alt="TaskFlow AI Dashboard" class="dashboard__img"
                         loading="lazy" decoding="async" width="1400" height="900">
-                </div>
+                </figure>
 
             </div>
         </section>
 
         <!--==================== HOW IT WORKS ====================-->
-        <section class="how section" id="how">
-            <div class="container">
+        <section class="how section" id="how-it-works">
+            <div class="how__container container">
 
                 <!-- Section Header -->
                 <div class="section__header">
                     <span class="section__badge">
-                        <i class="ri-flashlight-line"></i>
+                        <i class="ri-flashlight-line" aria-hidden="true"></i>
                         Simple Process
                     </span>
 
@@ -360,7 +361,7 @@
                 </div>
 
                 <!-- Steps -->
-                <div class="how__container">
+                <div class="how__steps">
 
                     <!-- Step 1 -->
                     <article class="how__card">
@@ -370,7 +371,7 @@
                         </div>
 
                         <div class="how__icon">
-                            <i class="ri-chat-3-line"></i>
+                            <i class="ri-chat-3-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="how__title">
@@ -385,8 +386,8 @@
                     </article>
 
                     <!-- Arrow -->
-                    <div class="how__arrow">
-                        <i class="ri-arrow-right-line"></i>
+                    <div class="how__arrow" aria-hidden="true">
+                        <i class="ri-arrow-right-line" aria-hidden="true"></i>
                     </div>
 
                     <!-- Step 2 -->
@@ -397,7 +398,7 @@
                         </div>
 
                         <div class="how__icon">
-                            <i class="ri-ai-generate"></i>
+                            <i class="ri-ai-generate" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="how__title">
@@ -412,7 +413,7 @@
                     </article>
 
                     <!-- Arrow -->
-                    <div class="how__arrow">
+                    <div class="how__arrow" aria-hidden="true">
                         <i class="ri-arrow-right-line"></i>
                     </div>
 
@@ -424,7 +425,7 @@
                         </div>
 
                         <div class="how__icon">
-                            <i class="ri-checkbox-circle-line"></i>
+                            <i class="ri-checkbox-circle-line" aria-hidden="true"></i>
                         </div>
 
                         <h3 class="how__title">
@@ -451,7 +452,8 @@
 
                 <!-- Section Header -->
                 <div class="section__header">
-                    <span class="section__badge">TESTIMONIALS</span>
+                    <span class="section__badge"><i class="ri-chat-quote-line"
+                            aria-hidden="true"></i>Testimonials</span>
 
                     <h2 class="section__title">
                         Loved by Productive Teams Worldwide
@@ -582,7 +584,7 @@
                 <div class="pricing__cards">
 
                     <!-- STARTER -->
-                    <div class="pricing__card">
+                    <article class="pricing__card">
                         <h3 class="pricing__plan">Starter</h3>
 
                         <div class="pricing__price">
@@ -598,13 +600,13 @@
                             <li>Email support</li>
                         </ul>
 
-                        <a href="#" class="button button--secondary">
+                        <a href="/signup" class="button button--secondary">
                             Start Free
                         </a>
-                    </div>
+                    </article>
 
                     <!-- PRO (POPULAR) -->
-                    <div class="pricing__card pricing__card--popular">
+                    <article class="pricing__card pricing__card--popular">
 
                         <div class="pricing__badge">Most Popular</div>
 
@@ -623,13 +625,13 @@
                             <li>Priority support</li>
                         </ul>
 
-                        <a href="#" class="button button--primary">
+                        <a href="/signup?plan=pro" class="button button--primary">
                             Go Pro
                         </a>
-                    </div>
+                    </article>
 
                     <!-- BUSINESS -->
-                    <div class="pricing__card">
+                    <article class="pricing__card">
                         <h3 class="pricing__plan">Business</h3>
 
                         <div class="pricing__price">
@@ -645,8 +647,10 @@
                             <li>Dedicated support</li>
                         </ul>
 
-                        <button class="pricing__btn">Contact Sales</button>
-                    </div>
+                        <a href="/contact-sales" class="button button--secondary">
+                            Contact Sales
+                        </a>
+                    </article>
 
                 </div>
 
@@ -663,7 +667,7 @@
             <div class="cta__container container">
 
                 <span class="cta__badge">
-                    🚀 Start Building Smarter Today
+                    <span aria-hidden="true">🚀</span> Start Building Smarter Today
                 </span>
 
                 <h2 class="section__title">
@@ -676,8 +680,8 @@
                 </p>
 
                 <div class="cta__buttons">
-                    <a href="#" class="button button--primary">Get Started Free</a>
-                    <a href="#" class="button button--secondary">View Demo</a>
+                    <a href="/signup" class="button button--primary">Get Started Free</a>
+                    <a href="/demo" class="button button--secondary">View Demo</a>
                 </div>
 
                 <div class="cta__trust">
@@ -693,13 +697,13 @@
         </section>
     </main>
 
-    <footer class="footer" id="footer">
+    <footer class="footer" id="footer" aria-label="Footer">
         <div class="footer__container container">
 
             <!-- Logo & Description -->
             <div class="footer__brand">
                 <a href="#home" class="footer__logo">
-                    <img src="assets/logos/Taskflow AI logo.png" alt="TaskFlow AI logo" loading="lazy" decoding="async">
+                    <img src="assets/logos/taskflow-ai-logo.png" alt="TaskFlow AI logo" loading="lazy" decoding="async">
                     <span>TaskFlow AI</span>
                 </a>
 
@@ -716,8 +720,8 @@
                 <ul class="footer__links">
                     <li><a href="#features" class="footer__link">Features</a></li>
                     <li><a href="#pricing" class="footer__link">Pricing</a></li>
-                    <li><a href="#" class="footer__link">Integrations</a></li>
-                    <li><a href="#" class="footer__link">Security</a></li>
+                    <li><a href="/integrations" class="footer__link">Integrations</a></li>
+                    <li><a href="/security" class="footer__link">Security</a></li>
                 </ul>
             </div>
 
@@ -726,10 +730,10 @@
                 <h3 class="footer__title">Company</h3>
 
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">About</a></li>
-                    <li><a href="#" class="footer__link">Careers</a></li>
-                    <li><a href="#" class="footer__link">Contact</a></li>
-                    <li><a href="#" class="footer__link">Privacy</a></li>
+                    <li><a href="/about" class="footer__link">About</a></li>
+                    <li><a href="/careers" class="footer__link">Careers</a></li>
+                    <li><a href="/contact" class="footer__link">Contact</a></li>
+                    <li><a href="/privacy" class="footer__link">Privacy</a></li>
                 </ul>
             </div>
 
@@ -738,10 +742,10 @@
                 <h3 class="footer__title">Resources</h3>
 
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Blog</a></li>
-                    <li><a href="#" class="footer__link">Help Center</a></li>
-                    <li><a href="#" class="footer__link">API Docs</a></li>
-                    <li><a href="#" class="footer__link">FAQ</a></li>
+                    <li><a href="/blog" class="footer__link">Blog</a></li>
+                    <li><a href="/help" class="footer__link">Help Center</a></li>
+                    <li><a href="/docs/api" class="footer__link">API Docs</a></li>
+                    <li><a href="/faq" class="footer__link">FAQ</a></li>
                 </ul>
             </div>
 
@@ -753,8 +757,12 @@
                     Get the latest AI productivity tips and product updates.
                 </p>
 
-                <form class="footer__form">
-                    <input type="email" id="email" placeholder="Enter your email" class="footer__input" required>
+                <form class="footer__form" action="/subscribe" method="post">
+                    <label for="newsletter-email" class="sr-only">
+                        Email address
+                    </label>
+                    <input type="email" id="newsletter-email" inputmode="email" placeholder="Enter your email"
+                        class="footer__input" name="email" autocomplete="email" required>
 
                     <button type="submit" class="button footer__button">
                         Subscribe
@@ -762,25 +770,29 @@
                 </form>
 
                 <!-- Social Icons -->
+                <div class="footer__social">
+                    <a href="https://github.com/nico-devstudio" class="footer__social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="ri-github-line" aria-hidden="true"></i>
+                    </a>
 
+                    <a href="https://www.linkedin.com/in/nico-garilva-dev" class="footer__social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+
+                    <a href="https://www.upwork.com/freelancers/~01bf8942fde01bbc0d" class="footer__social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+                        <i class="ri-twitter-x-line" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.upwork.com/freelancers/~01bf8942fde01bbc0d" class="footer__social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+                        <i class="ri-upwork-line" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
-            <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="GitHub">
-                    <i class="ri-github-line"></i>
-                </a>
 
-                <a href="#" class="footer__social-link" aria-label="LinkedIn">
-                    <i class="ri-linkedin-box-line"></i>
-                </a>
-
-                <a href="#" class="footer__social-link" aria-label="Twitter">
-                    <i class="ri-twitter-x-line"></i>
-                </a>
-
-                <a href="#" class="footer__social-link" aria-label="Discord">
-                    <i class="ri-discord-line"></i>
-                </a>
-            </div>
 
         </div>
 
@@ -792,16 +804,17 @@
                     &#169; 2026 TaskFlow AI. All rights reserved.
                 </p>
 
-                <a href="#" class="footer__developer">
+                <a href="https://github.com/nico-devstudio" class="footer__developer" target="_blank"
+                    rel="noopener noreferrer">
 
                     <span>Designed & Developed by</span>
                     <img src="assets/logos/logo-white.png" alt="NicoDev Studio" class="footer__developer-logo">
                 </a>
 
                 <div class="footer__legal">
-                    <a href="#" class="footer__legal-link">Terms</a>
-                    <a href="#" class="footer__legal-link">Privacy</a>
-                    <a href="#" class="footer__legal-link">Cookies</a>
+                    <a href="/terms" class="footer__legal-link">Terms</a>
+                    <a href="/privacy" class="footer__legal-link">Privacy</a>
+                    <a href="/cookies" class="footer__legal-link">Cookies</a>
                 </div>
 
             </div>
