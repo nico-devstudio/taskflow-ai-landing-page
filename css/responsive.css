@@ -1,16 +1,47 @@
 @media screen and (min-width:768px) {
     :root {
-        --h1: 3rem;
-        --h2: 2.5rem;
-        --h3: 2rem;
-        --text-lg: 1.5rem;
-        --text: 1.2rem;
-        --text-sm: 1rem;
-        --text-xs: 0.85rem;
-    }
+        /* Typography */
+        --font-size-xs: 0.813rem;
+        /* 13px */
+        --font-size-sm: 0.938rem;
+        /* 15px */
+        --font-size-base: 1rem;
+        /* 16px */
+        --font-size-lg: 1.25rem;
+        /* 20px */
+        --font-size-xl: 1.5rem;
+        /* 24px */
+        --font-size-2xl: 1.875rem;
+        /* 30px */
+        --font-size-3xl: 2.5rem;
+        /* 40px */
+        --font-size-4xl: 3.5rem;
+        /* 56px */
+        --font-size-5xl: 4.5rem;
+        /* 72px */
 
-    .nav {
-        height: 5rem;
+        /* Spacing */
+        --space-xs: 0.75rem;
+        /* 12px */
+        --space-sm: 1.25rem;
+        /* 20px */
+        --space-md: 2rem;
+        /* 32px */
+        --space-lg: 3rem;
+        /* 48px */
+        --space-xl: 4rem;
+        /* 64px */
+        --space-2xl: 5rem;
+        /* 80px */
+        --space-3xl: 7rem;
+        /* 112px */
+
+        /* Radius (optional) */
+        --radius-lg: 24px;
+        --radius-xl: 32px;
+
+        /* Header */
+        --header-height: 5.5rem;
     }
 
     .nav__logo img {
@@ -26,61 +57,47 @@
     }
 
     .social__logos {
+        grid-template-columns: repeat(5, max-content);
+        column-gap: var(--space-xl);
+        margin-bottom: auto;
+    }
+
+    .social__logo.bottom1,
+    .social__logo.bottom2 {
+        grid-area: unset;
+    }
+
+    .social__stats {
+        justify-content: center;
         grid-template-columns: repeat(3, max-content);
-    }
-
-    .features {
-        padding-block: 4rem;
-    }
-
-    .features__container {
-        gap: 4rem;
-    }
-
-    .features__header {
-        max-width: 650px;
-        margin-inline: auto;
+        gap: var(--space-lg);
     }
 
     .features__content {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
     }
 
-    .features__card {
-        padding: 1.75rem;
-    }
-
-    .dashboard {
-        padding: 2rem 0;
-    }
-
-    .dashboard__container {
-        gap: 2rem;
-    }
-
-    .dashboard__description {
-        width: 80%;
-        margin: 0 auto 2.5rem;
-    }
 
     .dashboard__img {
         max-width: 700px;
     }
 
     .how__container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         align-items: center;
-        gap: 1.5rem;
     }
+
+    .how__steps {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        max-width: 500px;
+        justify-self: center;
+    }
+
 
     .how__arrow {
         display: none;
-    }
-
-    .how__card {
-        height: 100%;
-        text-align: center;
     }
 
     .how__icon {
@@ -98,78 +115,57 @@
         text-align: center;
     }
 
-    .testimonial__card.third {
+    .testimonial__card--featured {
         grid-column: span 2;
         max-width: 400px;
         justify-self: center;
     }
 
-    .pricing {
-        padding: 4rem 2rem;
-    }
 
-    .pricing__title {
-        font-size: 32px;
-    }
-
-    .pricing__subtitle {
-        font-size: 15.5px;
-    }
 
     .pricing__cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .pricing__card:nth-child(3) {
-        grid-column: 1 / -1;
-        max-width: 100%;
     }
 
     .pricing__card--popular {
+        grid-column: 1 / -1;
+        width: 350px;
+        justify-self: center;
         transform: scale(1.04);
     }
 
-    .cta__title {
-        font-size: 34px;
-    }
-
-    .cta__description {
-        font-size: 16px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+    .cta__buttons {
+        flex-direction: row;
+        width: 80%;
+        justify-content: center;
+        margin-inline: auto;
     }
 
     .cta__trust {
         flex-direction: row;
         justify-content: center;
-        gap: 20px;
     }
 
-    .cta__buttons {
-        width: 80%;
-        justify-self: center;
-    }
 
     .footer__container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 3rem 2rem;
-        text-align: center;
         place-items: center;
     }
 
-    .footer__logo {
-        justify-self: center;
+    .footer__newsletter {
+        grid-column: span 2;
     }
 
     .footer__form {
         grid-template-columns: 1fr auto;
+        align-items: center;
     }
 
     .footer__button {
         width: max-content;
+        grid-column: 2;
+        justify-self: center;
     }
 
     .footer__bottom-container {
@@ -187,10 +183,6 @@
         justify-content: center;
     }
 
-    .footer__newsletter {
-        grid-column: span 2;
-    }
-
     .footer__social {
         grid-column: 1 / -1;
         ;
@@ -203,12 +195,18 @@
 
 @media screen and (min-width:1024px) {
     :root {
-        --h2: 3rem;
+        --font-size-4xl: 4rem;
+        /* 64px */
+        --font-size-5xl: 5rem;
+        /* 80px */
+
+        --space-xl: 5rem;
+        --space-2xl: 6rem;
+        --space-3xl: 8rem;
+
+        --header-height: 6rem;
     }
 
-    .nav {
-        height: 5.5rem;
-    }
 
     .nav__toggle,
     .nav__close {
@@ -256,6 +254,10 @@
         color: var(--first-color);
     }
 
+    .hero__title {
+        font-size: var(--font-size-4xl);
+    }
+
     .hero__container {
         grid-template-columns: 1fr 1fr;
         padding-inline: 2.2rem;
@@ -273,8 +275,8 @@
         border: 1px solid rgba(255, 255, 255, .1);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 1rem;
         border-radius: var(--radius-md);
+        padding-inline: 1rem;
     }
 
     .social__logos {
@@ -387,10 +389,8 @@
     }
 
     .pricing__cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
 
@@ -400,6 +400,8 @@
     }
 
     .pricing__card--popular {
+        grid-column: 2;
+        grid-row: 1;
         transform: scale(1.08);
     }
 
